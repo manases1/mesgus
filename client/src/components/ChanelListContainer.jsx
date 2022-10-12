@@ -3,12 +3,19 @@ import { ChanelList, useChatContext } from 'stream-chat-react'
 import Cookies from 'universal-cookie'
 
 import { ChannelSearch, TeamChannelList, TeamChannelPreview } from './'
+import HomeIcon from '../MyAssets/home.png'
+import LogoutIcon from '../MyAssets/logout.png'
 
 const SideBar = () => (
     <div className='channel-list__sidebar'>
         <div className='channel-list__sidebar__icon1'>
             <div className='icon1__inner'>
-                <img src={icon} alt='icon here' width="30" />
+                <img src={HomeIcon} alt='home icon here' width="30" />
+            </div>
+        </div>
+        <div className='channel-list__sidebar__icon2'>
+            <div className='icon2__inner'>
+                <img src={LogoutIcon} alt='log out icon here' width="30" />
             </div>
         </div>
     </div>
@@ -16,7 +23,9 @@ const SideBar = () => (
 
 const ChanelListContainer = () => {
   return (
-    <div>ChanelListContainer</div>
+    <div>
+        <SideBar/>
+    </div>
   )
 }
 
