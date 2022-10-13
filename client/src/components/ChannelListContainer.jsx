@@ -1,8 +1,8 @@
 import React from 'react'
-import { ChanelList, useChatContext } from 'stream-chat-react'
+import { ChannelList, useChatContext } from 'stream-chat-react'
 import Cookies from 'universal-cookie'
 
-import { ChannelSearch, TeamChannelList, TeamChannelPreview } from './'
+import { ChannelSearch, TeamChannelList, TeamChannelPreview } from '.'
 import HomeIcon from '../MyAssets/home.png'
 import LogoutIcon from '../MyAssets/logout.png'
 
@@ -27,16 +27,26 @@ const CompanyHeader = () => (
     </div>
 )
 
-const ChanelListContainer = () => {
+const ChannelListContainer = () => {
   return (
     <div>
         <SideBar/>
         <div className='channel-list__list__wrapper'>
             <CompanyHeader />
             <ChannelSearch />
+            <ChannelList 
+                filters={{}}
+                channelRenderFilterFn={() => {}}
+                List={(listProps) => (
+                    <TeamChannelList 
+                        {...listProps}
+                        type="team"
+                    />
+                )}
+            />
         </div>
     </div>
   )
 }
 
-export default ChanelListContainer
+export default ChannelListContainer

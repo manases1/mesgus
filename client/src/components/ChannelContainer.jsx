@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ChanelContainer = () => {
+const ChannelContainer = () => {
   return (
     <div>ChanelContainer</div>
   )
 }
 
-export default ChanelContainer
+export default ChannelContainer
