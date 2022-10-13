@@ -21,10 +21,19 @@ const SideBar = () => (
     </div>
 )
 
+const CompanyHeader = () => (
+    <div className='channel-list__header'>
+        <p className='channel-list__header__text'>Mesgus</p>
+    </div>
+)
+
 const ChanelListContainer = () => {
   return (
     <div>
         <SideBar/>
+        <div className='channel-list__list__wrapper'>
+            <CompanyHeader />
+        </div>
     </div>
   )
 }
