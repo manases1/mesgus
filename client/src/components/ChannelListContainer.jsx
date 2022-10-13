@@ -43,6 +43,11 @@ const ChannelListContainer = () => {
                         type="team"
                     />
                 )}
+                Preview={(previewProps) => (
+                    <TeamChannelPreview
+                    {...previewProps}
+                    type="team" />
+                )}
             />
         </div>
     </div>
