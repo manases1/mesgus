@@ -3,7 +3,7 @@ import { useChatContext } from 'stream-chat-react'
 
 import { SearchIcon } from '../MyAssets'
 
-const channelSearch = () => {
+const ChannelSearch = () => {
     const [query, setQuery] = useState('');
     const [loading, setLoading] = useState(false);
 
@@ -40,4 +40,4 @@ const channelSearch = () => {
   )
 }
 
-export default channelSearch
+export default ChannelSearch
