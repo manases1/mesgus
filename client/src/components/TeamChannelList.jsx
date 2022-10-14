@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 import { AddChannel } from '../MyAssets'
 
-const TeamChannelList = ({ setToggleContainer, children, error = false, loading, type, isCreating, setIsCreating, setCreateType, setIsEditing}) => {
+const TeamChannelList = ({ setToggleContainer, children, error = false, loading, type, isCreating, setIsCreating, setCreateType, setIsEditing }) => {
     if(error) {
         return type === 'team' ? (
             <div className="team-channel-list">
@@ -24,12 +24,12 @@ const TeamChannelList = ({ setToggleContainer, children, error = false, loading,
     }
 
     return (
-    <div className="team-channel-list">
-        <div className="team-channel-list__header">
-            <p className="team-channel-list__header__title">
-            {type === 'team' ? 'Channels' : 'Direct Messages'}
-            </p>
-            <AddChannel 
+        <div className="team-channel-list">
+            <div className="team-channel-list__header">
+                <p className="team-channel-list__header__title">
+                    {type === 'team' ? 'Channels' : 'Direct Messages'}
+                </p>
+                <AddChannel 
                     isCreating={isCreating}
                     setIsCreating={setIsCreating}
                     setCreateType={setCreateType} 
@@ -37,10 +37,10 @@ const TeamChannelList = ({ setToggleContainer, children, error = false, loading,
                     type={type === 'team' ? 'team' : 'messaging'}
                     setToggleContainer={setToggleContainer}
                 />
+            </div>
+            {children}
         </div>
-        {children}
-    </div>
-  )
+    )
 }
 
 export default TeamChannelList
