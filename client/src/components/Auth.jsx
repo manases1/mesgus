@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Cookie from 'universal-cookie'
+import Cookies from 'universal-cookie'
 import axios from 'axios';
 
 import signinImage from '../MyAssets/signup.jpg'
@@ -23,18 +23,14 @@ const Auth = () => {
         setForm({ ...form, [e.target.name]: e.target.value });
     }
 
-    const switchMode = () => {
-        setIsSignup((prevIsSignup) => !prevIsSignup);
-    }
-
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const { fullName, username, password, phoneNumber, avatarURL } = form;
+        const { username, password, phoneNumber, avatarURL } = form;
 
         const URL = 'http://localhost:4000/auth';
 
-        const { data: { token, userId, hashedPassword } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
+        const { data: { token, userId, hashedPassword, fullName } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
             username, password, fullName: form.fullName, phoneNumber, avatarURL,
         });
 
@@ -51,6 +47,9 @@ const Auth = () => {
 
         window.location.reload();
     }
+
+    const switchMode = () => {
+        setIsSignup((prevIsSignup) => !prevIsSignup);
     }
 
   return (
