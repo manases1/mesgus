@@ -25,12 +25,16 @@ const Auth = () => {
         setIsSignup((prevIsSignup) => !prevIsSignup);
     }
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+    }
+
   return (
     <div className="auth__form-container">
         <div className="auth__form-container_fields">
             <div className="auth__form-container_fields-content">
                 <p>{isSignup ? 'Sign Up' : 'Sign In'}</p>
-                <form onSubmit={() => {}}>
+                <form onSubmit={handleSubmit}>
                     {isSignup && (
                         <div className="auth__form-container-fields-content_input">
                             <label htmlFor="fullName">Full Name</label>
