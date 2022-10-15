@@ -10,6 +10,7 @@ const TeamChannelPreview = ({ setActiveChannel, setIsCreating, setIsEditing, set
         </p>
     );
 
+
     const DirectPreview = () => {
         const members = Object.values(channel.state.members).filter(({ user }) => user.id !== client.userID);
     
