@@ -11,6 +11,9 @@
     width: 100%;
     min-height: 100%;
 }
+p {
+  color: white;
+}
   
   #root {
     height: 100%;
