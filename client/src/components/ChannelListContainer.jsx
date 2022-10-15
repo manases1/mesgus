@@ -3,8 +3,8 @@ import { ChannelList, useChatContext } from 'stream-chat-react'
 import Cookies from 'universal-cookie'
 
 import { ChannelSearch, TeamChannelList, TeamChannelPreview } from '.'
-import HomeIcon from '../MyAssets/home.png'
-import LogoutIcon from '../MyAssets/logout.png'
+import HomeIcon from '../assets/home.png'
+import LogoutIcon from '../assets/logout.png'
 
 const cookies = new Cookies();
 

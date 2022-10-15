@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Avatar, useChatContext } from 'stream-chat-react';
 
-import { InviteIcon } from '../MyAssets';
+import { InviteIcon } from '../assets';
 
 const ListContainer = ({ children }) => {
     return (
@@ -72,7 +72,7 @@ const UserList = ({ setSelectedUsers }) => {
         }
 
         if(client) getUsers()
-    }, [client, loading]);
+    }, []);
 
     if(error) {
         return (
