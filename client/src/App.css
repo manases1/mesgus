@@ -488,7 +488,7 @@
   }
   
   ::placeholder {
-    color: rgba(255, 255, 255, 0.66);
+    color: #00000084;
     white-space: nowrap;
     width: 150px;
   }
