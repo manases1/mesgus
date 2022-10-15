@@ -1,14 +1,16 @@
 :root {
-    --primary-color: #005fff;
+    --primary-color: rgb(31, 30, 101);
     --primary-color-alpha: #005fff1a;
   }
   
   html,
-  body {
+  body, #wrapper {
     margin: 0;
     padding: 0;
     height: 100%;
-  }
+    width: 100%;
+    min-height: 100%;
+}
   
   #root {
     height: 100%;
@@ -27,7 +29,7 @@
     justify-content: center;
   
     padding: 2rem;
-    background: #005fff;
+    background: #1f064e;
   }
   
   .auth__form-container_image {
@@ -50,13 +52,13 @@
     box-shadow: 0px 1px 5px rgb(0 0 0 / 10%);
     border-radius: 5px;
     transition: 0.8s ease;
-    background: #fff;
+    background: rgb(47, 37, 97);
   }
   
   .auth__form-container_fields-content p {
     font-size: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: #05245a;
+    color: #b8d2ff;
     font-weight: 900;
   }
   
@@ -70,7 +72,7 @@
   
   .auth__form-container_fields-content_input label {
     margin-bottom: 0.45rem;
-    color: rgb(61, 79, 88);
+    color: #b8d2ff;
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.7px;
@@ -85,18 +87,18 @@
     outline: none;
     transition: all 150ms ease-in-out 0s;
     width: 85%;
-    background: #fff;
+    background: rgb(255, 255, 255);
   }
   
   .auth__form-container_fields-content_input input::placeholder {
-    color: #b1b1b1;
+    color: #c4c3c3;
     width: 100%;
     font-weight: unset;
     font-family: Arial, Helvetica, sans-serif;
   }
   
   .auth__form-container_fields-content_input input:hover {
-    border-color: #dcdddd;
+    border-color: #000000;
   }
   
   .auth__form-container_fields-content_input input:focus,
@@ -132,7 +134,7 @@
   }
   
   .auth__form-container_fields-content_button button:hover {
-    background: #0066ff;
+    background: #0041a1;
   }
   
   .auth__form-container_fields-account {
@@ -145,12 +147,12 @@
   
   .auth__form-container_fields-account p {
     font-size: 14px;
-    color: #000;
+    color: rgb(255, 255, 255);
     font-weight: 500;
   }
   
   .auth__form-container_fields-account span {
-    color: #05245a;
+    color: #5795ff;
     cursor: pointer;
     font-weight: 700;
   }
@@ -276,7 +278,7 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 120%;
-    color: #2c2c30;
+    color: #000000;
     margin-bottom: 10px;
   }
   
@@ -289,7 +291,7 @@
     font-size: 14px;
     line-height: 120%;
     margin: 0;
-    color: #858688;
+    color: #040404;
   }
   
   .channel__container {
