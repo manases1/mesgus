@@ -1,4 +1,4 @@
-# workbook
+# Mesgus
 ## project description
 Mesgus is a messagin app where people can create their own account and be able to start a conversation with other people in real time.
 
